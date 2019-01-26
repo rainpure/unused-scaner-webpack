@@ -1,26 +1,26 @@
-# UnusedWebpackPlugin [![CircleCI](https://circleci.com/gh/MatthieuLemoine/unused-webpack-plugin.svg?style=svg)](https://circleci.com/gh/MatthieuLemoine/unused-webpack-plugin)
+# WebpackUnusedScaner
 
-A webpack plugin to find unused modules/source files.
+A webpack plugin to find unused modules/source files and remove them.
 
-![unused-webpack-plugin](images/with-root.png)
+![webpack-unused-scaner](images/with-root.png)
 
 ## Install
 
 ```
-npm i --dev unused-webpack-plugin
+npm i --dev webpack-unused-scaner
 ```
 
 ## Usage
 
 ```javascript
 const path = require('path');
-const UnusedWebpackPlugin = require('unused-webpack-plugin');
+const WebpackUnusedScaner = require('webpack-unused-scaner');
 
 module.exports = {
   // webpack configuration
   plugins: [
     ...otherPlugins,
-    new UnusedWebpackPlugin({
+    new WebpackUnusedScaner({
       // Source directories
       directories: [path.join(__dirname, 'src')],
       // Exclude patterns
@@ -50,7 +50,3 @@ With root
 Without root
 
 ![Without root](images/without-root.png)
-
-## Related
-[remnants](https://github.com/MatthieuLemoine/remnants)
-[unused-webpack-plugin](https://github.com/MatthieuLemoine/unused-webpack-plugin)

@@ -1,10 +1,10 @@
 {
-  "name": "unused-webpack-plugin",
-  "version": "2.3.1",
+  "name": "webpack-unused-scaner",
+  "version": "1.0.0",
   "description": "A webpack plugin to find unused modules/source files",
   "main": "index.js",
-  "repository": "https://github.com/MatthieuLemoine/unused-webpack-plugin",
-  "author": "MatthieuLemoine",
+  "repository": "https://github.com/rainpure/webpack-unused-scaner.git",
+  "author": "rainpure",
   "license": "MIT",
   "scripts": {
     "test": "jest",
