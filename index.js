@@ -1,5 +1,7 @@
 const path = require('path');
 const chalk = require('chalk'); // Terminal string styling done right（命令行样式工具）
+const ora = require('ora');
+const fs = require('fs');
 const { searchFiles } = require('./lib/utils'); // deglob: Take a list of glob patterns and return an array of file locations（获取文件位置）
 
 // 由 webpack.config.js 传入的 options
@@ -9,6 +11,7 @@ function UnusedPlugin(options) {
   this.root = options.root;
   this.failOnUnused = options.failOnUnused || false;
   this.useGitIgnore = options.useGitIgnore || true;
+  this.remove = options.remove || false;
 }
 
 UnusedPlugin.prototype.apply = function apply(compiler) {
@@ -77,6 +80,21 @@ function display(filesByDirectory) {
       chalk.yellow(`    • ${path.relative(directory, file)}\n`),
     ));
   });
+  if (this.remove) {
+    process.stdout.write('\n');
+    // 删除文件
+    const spinnerDelete = ora('Deleting').start();
+    allFiles.forEach((img) => {
+      fs.unlink(img, (err) => {
+        if (err) {
+          spinnerDelete.fail();
+          throw err;
+        }
+      });
+    });
+    spinnerDelete.text = '🔥 all unused source files deleted.';
+    spinnerDelete.succeed();
+  }
   process.stdout.write(chalk.green('\n*** Unused Plugin ***\n\n'));
 
   return allFiles;

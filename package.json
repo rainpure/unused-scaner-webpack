@@ -25,7 +25,8 @@
   },
   "dependencies": {
     "chalk": "^2.1.0",
-    "deglob": "^3.1.0"
+    "deglob": "^3.1.0",
+    "ora": "^3.0.0"
   },
   "husky": {
     "hooks": {
