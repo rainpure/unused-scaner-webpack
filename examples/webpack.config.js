@@ -1,6 +1,6 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const UnusedWebpackPlugin = require('../');
+const WebpackUnusedScaner = require('webpack-unused-scaner');
 
 module.exports = {
   target: 'node',
@@ -66,7 +66,7 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('index.css'),
-    new UnusedWebpackPlugin({
+    new WebpackUnusedScaner({
       // Source directories
       directories: [
         path.join(__dirname, 'js'),
@@ -78,7 +78,7 @@ module.exports = {
       // Root directory (optional)
       root: __dirname,
       failOnUnused: false,
-      remove: false,
+      remove: true,
     }),
   ],
 };
