@@ -78,6 +78,7 @@ module.exports = {
       // Root directory (optional)
       root: __dirname,
       failOnUnused: false,
+      remove: false,
     }),
   ],
 };
