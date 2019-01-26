@@ -1,6 +1,6 @@
 {
   "name": "webpack-unused-scaner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A webpack plugin to find unused modules/source files",
   "main": "index.js",
   "repository": "https://github.com/rainpure/webpack-unused-scaner.git",
