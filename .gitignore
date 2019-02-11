@@ -1,3 +1,11 @@
 node_modules
 .npmrc
 .DS_Store
+.npmignore
+.eslintrc
+.eslintignore
+.prettierignore
+.prettierrc
+.vscode-upload.json
+yarn.lock
+package-lock.json
