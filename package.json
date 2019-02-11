@@ -4,7 +4,7 @@
   "description": "A webpack plugin to find unused modules/source files",
   "main": "index.js",
   "repository": "https://github.com/rainpure/webpack-unused-scaner.git",
-  "author": "rainpure",
+  "author": "MatthieuLemoine",
   "license": "MIT",
   "scripts": {
     "test": "jest",
