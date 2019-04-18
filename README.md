@@ -52,4 +52,4 @@ Without root
 ![Without root](images/without-root.png)
 
 ## Related
-Add DELETE option from [unused-webpack-plugin](https://github.com/MatthieuLemoine/unused-webpack-plugin).
+Add DELETE option for [unused-webpack-plugin](https://github.com/MatthieuLemoine/unused-webpack-plugin).
