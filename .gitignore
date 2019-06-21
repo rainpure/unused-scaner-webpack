@@ -2,3 +2,4 @@ node_modules
 .npmrc
 .DS_Store
 .vscode-upload.json
+.package-lock.json
