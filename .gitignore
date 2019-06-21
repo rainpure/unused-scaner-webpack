@@ -3,3 +3,4 @@ node_modules
 .DS_Store
 .vscode-upload.json
 .package-lock.json
+yarn.lock
