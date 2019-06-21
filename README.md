@@ -11,6 +11,7 @@ npm i --dev webpack-unused-scaner
 ```
 
 ## Usage
+[DEMO](https://github.com/rainpure/webpack-unused-scaner/tree/master/examples)
 
 ```javascript
 const path = require('path');
