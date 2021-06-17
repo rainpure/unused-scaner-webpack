@@ -14,6 +14,8 @@ npm i --dev webpack-unused-scaner
 [DEMO](https://github.com/rainpure/webpack-unused-scaner/tree/master/examples)
 
 ```javascript
+// webpack.config.js
+
 const path = require('path');
 const WebpackUnusedScaner = require('webpack-unused-scaner');
 
